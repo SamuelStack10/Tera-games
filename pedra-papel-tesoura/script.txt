@@ -1,0 +1,38 @@
+```javascript
+let jogadorPontos = 0;
+let pontosComputador = 0;
+
+const escolha = ["Pedra", "Papel", "Tesoura"];
+
+while (pontosComputador < 3 && jogadorPontos < 3) {
+    console.log("=== Jogo Pedra, Papel e Tesoura ===");
+    console.log("Escolha uma opção: Pedra, Papel ou Tesoura");
+
+    let jogador = prompt("Sua escolha:");
+
+    // Escolha aleatória do computador
+    let computador = escolha[Math.floor(Math.random() * escolha.length)];
+
+    console.log(`Computador escolheu: ${computador}`);
+
+    if (jogador === computador) {
+        console.log("Empate!");
+    } 
+    else if (
+        (jogador === "Pedra" && computador === "Tesoura") ||
+        (jogador === "Papel" && computador === "Pedra") ||
+        (jogador === "Tesoura" && computador === "Papel")
+    ) {
+        console.log("Você venceu!");
+        jogadorPontos++;
+    } 
+    else {
+        console.log("Computador venceu!");
+        pontosComputador++;
+    }
+
+    console.log(
+        `Pontuação - Você: ${jogadorPontos}, Computador: ${pontosComputador}`
+    );
+}
+```

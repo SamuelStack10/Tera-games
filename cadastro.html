@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Jogos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div> 
+        <a href="/contato.html">Contatos</a>
+    </div>
+
+    <h1>Cadastrar Jogos</h1>
+
+    <div class="cadastro">
+        
+        <input type="text" id="nome" placeholder="Digite o nome...">
+        <input type="text" id="categoria" placeholder="Digite a categoria...">
+        <input type="text" id="plataforma" placeholder="Digite a plataforma...">
+        <input type="text" id="nota" placeholder="Digite a nota...">
+
+        <button onclick="cadastrar()"> Cadastrar </button>
+        <br>
+        <br>
+        <a href="/index.html">Home</a>
+    </div>
+    <script>
+        const jogos = {
+            nome: document.getElementById("nome"),
+            categoria: document.getElementById("categoria"),
+            plataforma: document.getElementById("plataforma"),
+            nota: document.getElementById("nota")
+        }
+
+        fetch("http://api-jogos-elj6.onrender.com/jogos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(jogos)
+        }).then(res = res.json()).then(data => {
+            alert("Jogo cadastrado com sucesso!")
+            console.log(data)
+        }).catch(err =>{
+            console.log(err)
+            alert("Erro ao cadastrar")
+        })
+        
+            
+    </script>
+</body>
+</html>

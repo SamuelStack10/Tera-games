@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel e Tesoura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Pedra, Papel e Tesoura</h1>
+        <h3>Escolha uma opção:</h3>
+        <div id="choices">
+            <button onclick="play('pedra')">🧱 Pedra</button>
+            <button onclick="play('papel')">📄 Papel</button>
+            <button onclick="play('tesoura')">✂ Tesoura</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function play(userChoice) {
+            const choices = ['pedra', 'papel', 'tesoura'];
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            let result = '';
+
+            let jogadorPontos = parseInt(localStorage.getItem('jogadorPontos')) || 0;
+            let computadorPontos = parseInt(localStorage.getItem('computadorPontos')) || 0;
+
+            if (userChoice === computerChoice) {
+                result = 'Empate!';
+            } else if (
+                (userChoice === 'pedra' && computerChoice === 'tesoura') ||
+                (userChoice === 'papel' && computerChoice === 'pedra') ||
+                (userChoice === 'tesoura' && computerChoice === 'papel')
+            ) {
+                result = '🎉Você ganhou!';
+                jogadorPontos++;
+            } else {
+                result = '😢Você perdeu!';
+                computadorPontos++;
+            }
+
+            localStorage.setItem('jogadorPontos', jogadorPontos);
+            localStorage.setItem('computadorPontos', computadorPontos);
+
+            document.getElementById('result').innerHTML = `
+                Você escolheu: ${userChoice} <br>
+                Computador escolheu: ${computerChoice} <br>
+                Resultado: ${result} <br><br>
+                Seus pontos: ${jogadorPontos} | Pontos do computador: ${computadorPontos}
+                <br><br>
+                <button onclick="resetGame()">Reiniciar Jogo</button>
+            `;
+        } 
+        function resetGame() {
+            localStorage.removeItem('jogadorPontos');
+            localStorage.removeItem('computadorPontos');
+            document.getElementById('result').innerHTML = '';
+        }
+
+    </script> 
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+body {
+    background-color: cornflowerblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;                             
+}
+.container {
+    text-align: center;
+    margin-top: 150px;
+}
+
+#clickButton {
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: goldenrod;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+#clickButton:hover {
+    background-color: darkgoldenrod;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    background-color: lightgray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+    border: none;
+    color: black;
+}
+button:hover {
+    background-color: gray;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+
+h1 {
+    transition: all 0.5s ease;
+    color: goldenrod;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 50px;
+}
+h1:hover {
+    color: darkgoldenrod;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 55px;
+    cursor: default;
+}
+p {
+    transition: all 0.3s ease;
+    font-size: 24px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}

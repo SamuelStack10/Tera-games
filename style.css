@@ -1,0 +1,118 @@
+body{
+    background-color:  rgb(1, 10, 25);
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    margin-top: 67px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.jogos{
+    background-color: rgba(240, 248, 255, 0.148);
+    border-radius: 5px;
+    border-color: aquamarine;       
+    border-style: solid;
+    height: 170px; 
+    width: 300px;
+    padding: 30px;
+    margin-left: 0px;
+    margin-top: 20px;
+    
+    text-align: center;
+    
+}
+.contato{
+    background-color: rgba(240, 248, 255, 0.148);
+    border-radius: 5px;
+    border-color: aquamarine;       
+    border-style: solid;
+    height: 350px;
+    width: 300px;
+    padding: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    display: grid;
+    align-items: center;
+}
+
+h1{
+    font-size: 60px;
+}
+h1:hover{
+    transition: 0.5s;
+    color: aquamarine;
+    cursor: default;
+    scale: 1.2;
+}
+
+a{
+    color: aquamarine;
+    font-size: large;
+}
+input{
+    background-color: rgb(1, 10, 25);
+    color: white;
+    display: grid;
+    height: 30px;
+    text-align: center;
+    margin-top: 20px;
+    width: 300px;
+    border-radius: 5px;
+    border-color: aquamarine;
+}
+
+button{
+    background-color: aquamarine;
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: rgb(10, 60, 25);
+}
+button:hover{
+    background-color: rgb(1, 10, 25);
+    color: aquamarine;
+    border-color: aquamarine;
+}
+
+.btn{
+    background-color: aquamarine;
+    height: 60px;
+    width: 150px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: rgb(10, 60, 25);
+    font-size: 18px;
+    align-items: center;
+}
+
+.cadastro{
+    align-items: center;
+   
+}
+
+.game{
+    background-color: rgba(240, 248, 255, 0.148);
+    border-radius: 5px;
+    border-color: aquamarine;       
+    border-style: solid;
+    height: 170px; 
+    width: 300px;
+    padding: 30px;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    text-align: center;
+}
+.game:hover{
+    transition: 0.5s;
+    background-color: aquamarine;
+    color: rgb(1, 10, 25);
+    border-color: aquamarine;
+    transform: scale(1.1);
+}
+
+
