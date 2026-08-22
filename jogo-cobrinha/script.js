@@ -34,7 +34,7 @@ function startGame() {
     direction = { x: 1, y: 0 };
     nextDirection = { x: 1, y: 0 };
 
-    score = 0;
+    score = 200;
     gameOver = false;
     gameStarted = true;
 
@@ -46,7 +46,7 @@ function startGame() {
 
     clearInterval(gameLoopInterval);
 
-    gameLoopInterval = setInterval(gameLoop, 100);
+    gameLoopInterval = setInterval(gameLoop, 150);
 
     draw();
 }

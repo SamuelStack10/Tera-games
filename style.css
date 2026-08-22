@@ -9,11 +9,21 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
+#link{
+    margin-top: 20px;
+    font-size: 10px;
+    text-decoration: none;
+}
+#link:hover{
+    transition: ease 0.3s;
+    scale: 2;
+}
+
 .jogos{
-    background-color: rgba(240, 248, 255, 0.148);
+    /*background-color: rgba(240, 248, 255, 0.148);
     border-radius: 5px;
     border-color: aquamarine;       
-    border-style: solid;
+    border-style: solid;*/
     height: 170px; 
     width: 300px;
     padding: 30px;
@@ -101,7 +111,7 @@ button:hover{
     height: 170px; 
     width: 300px;
     padding: 30px;
-    margin-left: 0px;
+    margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     
@@ -114,5 +124,11 @@ button:hover{
     border-color: aquamarine;
     transform: scale(1.1);
 }
+
+#game{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
 
 
