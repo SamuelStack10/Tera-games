@@ -34,7 +34,7 @@ function startGame() {
     direction = { x: 1, y: 0 };
     nextDirection = { x: 1, y: 0 };
 
-    score = 200;
+    score = 0;
     gameOver = false;
     gameStarted = true;
 
@@ -157,8 +157,8 @@ function draw() {
 
     ctx.fillStyle =
         index === 0
-        ? "#86efac"
-        : "#4ade80";
+        ? "#88eef1"
+        : "#4ad9de";
 
     ctx.fillRect(
         segment.x * gridSize,
