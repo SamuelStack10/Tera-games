@@ -5,12 +5,28 @@ body{
     align-items: center;
     justify-content: center;
     display: grid;
-    margin-top: 67px;
+    margin-top: 40px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+html{
+    border: 5px;
+    border-color: aqua;
+    border-style: solid;
+}
+
+img{
+    height: 100px;
+    margin-left: 130px;
+    margin-top: 5px;
+}
+img:hover{
+    transition: ease 0.3s;
+    scale: 1.1;
 }
 
 #link{
     margin-top: 20px;
+    margin-bottom: 35px;
     font-size: 10px;
     text-decoration: none;
 }
@@ -22,13 +38,13 @@ body{
 .jogos{
     /*background-color: rgba(240, 248, 255, 0.148);
     border-radius: 5px;
-    border-color: aquamarine;       
+    border-color: aqua;       
     border-style: solid;*/
     height: 170px; 
     width: 300px;
     padding: 30px;
     margin-left: 0px;
-    margin-top: 20px;
+    margin-top: 5px;
     
     text-align: center;
     
@@ -36,7 +52,7 @@ body{
 .contato{
     background-color: rgba(240, 248, 255, 0.148);
     border-radius: 5px;
-    border-color: aquamarine;       
+    border-color: aqua;       
     border-style: solid;
     height: 350px;
     width: 300px;
@@ -49,16 +65,17 @@ body{
 
 h1{
     font-size: 60px;
+    margin-top: 0;
 }
 h1:hover{
     transition: 0.5s;
-    color: aquamarine;
+    color: aqua;
     cursor: default;
     scale: 1.2;
 }
 
 a{
-    color: aquamarine;
+    color: aqua;
     font-size: large;
 }
 input{
@@ -70,11 +87,11 @@ input{
     margin-top: 20px;
     width: 300px;
     border-radius: 5px;
-    border-color: aquamarine;
+    border-color: aqua;
 }
 
 button{
-    background-color: aquamarine;
+    background-color: aqua;
     height: 30px;
     width: 100px;
     margin-top: 20px;
@@ -83,17 +100,17 @@ button{
 }
 button:hover{
     background-color: rgb(1, 10, 25);
-    color: aquamarine;
-    border-color: aquamarine;
+    color: aqua;
+    border-color: aqua;
 }
 
 .btn{
-    background-color: aquamarine;
+    background-color: aqua;
     height: 60px;
-    width: 150px;
-    margin-top: 20px;
+    width: 180px;
+    margin-top: 10px;
     border-radius: 5px;
-    color: rgb(10, 60, 25);
+    color: rgb(10, 30, 60);
     font-size: 18px;
     align-items: center;
 }
@@ -106,7 +123,7 @@ button:hover{
 .game{
     background-color: rgba(240, 248, 255, 0.148);
     border-radius: 5px;
-    border-color: aquamarine;       
+    border-color: aqua;       
     border-style: solid;
     height: 170px; 
     width: 300px;
@@ -119,9 +136,9 @@ button:hover{
 }
 .game:hover{
     transition: 0.5s;
-    background-color: aquamarine;
+    background-color: aqua;
     color: rgb(1, 10, 25);
-    border-color: aquamarine;
+    border-color: aqua;
     transform: scale(1.1);
 }
 
