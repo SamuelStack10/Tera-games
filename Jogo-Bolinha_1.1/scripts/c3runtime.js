@@ -1366,6 +1366,7 @@ self.C3_ExpressionFuncs = [
 		() => "jump",
 		() => "player_jump",
 		() => "player_idle",
+		() => -5,
 		() => "collected",
 		() => "Fade_out",
 		() => "music",
