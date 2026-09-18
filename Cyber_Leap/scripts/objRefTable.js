@@ -8,6 +8,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Keyboard,
 		C3.Behaviors.Sin,
 		C3.Plugins.Audio,
+		C3.Plugins.Mouse,
+		C3.Plugins.Text,
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.Sprite.Acts.SetMirrored,
 		C3.Behaviors.Platform.Cnds.IsOnFloor,
@@ -22,7 +24,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Sprite.Cnds.IsOverlappingOffset,
-		C3.Behaviors.Platform.Acts.SimulateControl
+		C3.Behaviors.Platform.Acts.SimulateControl,
+		C3.Plugins.Mouse.Cnds.OnObjectClicked,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Mouse.Cnds.IsOverObject,
+		C3.Plugins.System.Cnds.Else
 	];
 };
 self.C3_JsPropNameTable = [
@@ -52,7 +58,10 @@ self.C3_JsPropNameTable = [
 	{Fade_out: 0},
 	{flag_end: 0},
 	{Fim_de_jogo: 0},
-	{box: 0}
+	{box: 0},
+	{Mouse: 0},
+	{botao: 0},
+	{Texto: 0}
 ];
 
 self.InstanceType = {
@@ -78,5 +87,8 @@ self.InstanceType = {
 	Fade_out: class extends self.ISpriteInstance {},
 	flag_end: class extends self.ISpriteInstance {},
 	Fim_de_jogo: class extends self.ISpriteInstance {},
-	box: class extends self.ISpriteInstance {}
+	box: class extends self.ISpriteInstance {},
+	Mouse: class extends self.IInstance {},
+	botao: class extends self.ISpriteInstance {},
+	Texto: class extends self.ITextInstance {}
 }
