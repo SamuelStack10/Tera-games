@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #3d479c);
+}
+
+.container {
+  width: 90%;
+  max-width: 650px;
+  padding: 30px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #f3f3f3;
+  border-radius: 12px;
+}
+
+.info div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info span {
+  color: #666;
+  font-size: 14px;
+}
+
+.info strong {
+  color: #333;
+  font-size: 20px;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.card {
+  height: 110px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner,
+.card.matched .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background: #4f46e5;
+  color: white;
+  font-size: 32px;
+}
+
+.card-back {
+  background: #fff;
+  border: 3px solid #4f46e5;
+  font-size: 42px;
+  transform: rotateY(180deg);
+}
+
+.card.matched .card-back {
+  background: #d1fae5;
+  border-color: #10b981;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #3730a3;
+  transform: scale(1.03);
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #10b981;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  .game {
+    gap: 8px;
+  }
+
+  .card {
+    height: 80px;
+  }
+
+  .card-front {
+    font-size: 24px;
+  }
+
+  .card-back {
+    font-size: 30px;
+  }
+}

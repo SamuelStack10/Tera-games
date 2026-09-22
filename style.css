@@ -12,8 +12,13 @@ html{
     border: 5px;
     border-color: aqua;
     border-style: solid;
+    min-height: 100vh;
 }
 
+.paragrafo{
+    font-size: 18px;
+    margin-top: 0;
+}
 img{
     height: 100px;
     margin-left: 130px;
@@ -54,7 +59,7 @@ img:hover{
     border-radius: 5px;
     border-color: aqua;       
     border-style: solid;
-    height: 350px;
+    height: auto;
     width: 300px;
     padding: 20px;
     margin-left: 10px;
@@ -71,7 +76,7 @@ h1:hover{
     transition: 0.5s;
     color: aqua;
     cursor: default;
-    scale: 1.2;
+    scale: 1.1;
 }
 
 a{
