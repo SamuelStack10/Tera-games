@@ -4,7 +4,8 @@ const movesElement = document.getElementById("moves");
 const restartButton = document.getElementById("restart");
 const message = document.getElementById("message");
 
-const symbols = ["🍎", "🍌", "🍇", "🍉", "🍓", "🍒", "🥝", "🍍"];
+//const symbols = ["🍎", "🍌", "🍇", "🍊", "🍓", "🍒", "🥝", "🍍"]; 
+const symbols = ["🍔", "🍟", "🌭", "🍞", "🍗", "🍫", "🍝", "🍕"];
 
 let cards = [];
 let firstCard = null;
