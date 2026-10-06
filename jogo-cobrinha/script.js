@@ -51,6 +51,32 @@ function startGame() {
     draw();
 }
 
+//pausar com o botao p 
+
+function pauseGame() {
+    gameStarted = false;
+    clearInterval(gameLoopInterval);
+    startButton.textContent = "Continuar";
+    info.textContent = "Jogo pausado. Pressione 'P' para continuar.";
+}
+function continueGame() {
+    gameStarted = true;
+    gameLoopInterval = setInterval(gameLoop, 150);
+    startButton.textContent = "Reiniciar";
+    info.textContent = "Use as setas ou WASD para mover";
+}
+document.addEventListener("keydown", function(event) {
+    if (event.key.toLowerCase() === "p") {
+        if (gameStarted) {
+            pauseGame();
+        }
+        else if (!gameOver) {
+            continueGame();
+        }
+    }
+});
+
+
 
 // =========================
 // CRIAR COMIDA
